@@ -1,0 +1,31 @@
+"""""" NeoBundle stuff 
+if has('vim_starting')
+   set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'MaxSt/FlatColor'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc.vim'    " remember to make install
+
+filetype plugin indent on     " Required!
+
+"""""" My Stuff 
+syntax on
+set rnu
+set ruler
+set cursorline
+set cursorcolumn
+let &colorcolumn=join(range(80,99),",")
+colorscheme flatcolor
+
+
+" indentation stuffs
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set smarttab
+
