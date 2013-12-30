@@ -1,0 +1,5 @@
+[user]
+	name = Michael Ackerman
+	email = binarymac@gmail.com
+[core]
+	excludesfile = ~/.gitignore
