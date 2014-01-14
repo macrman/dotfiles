@@ -3,3 +3,5 @@
 	email = binarymac@gmail.com
 [core]
 	excludesfile = ~/.gitignore
+[color]
+	ui = auto
