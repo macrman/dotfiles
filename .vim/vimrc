@@ -1,16 +1,18 @@
-"""""" NeoBundle stuff 
-if has('vim_starting')
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
-NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'MaxSt/FlatColor'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/vimproc.vim'    " remember to make install
+""""" vundle stuff 
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+
+""""" my bundles from github
+Bundle 'Shougo/unite.vim'
+
 
 filetype plugin indent on     " Required!
+
 
 """""" My Stuff 
 syntax on
@@ -19,7 +21,7 @@ set ruler
 set cursorline
 set cursorcolumn
 let &colorcolumn=join(range(80,99),",")
-colorscheme flatcolor
+"colorscheme flatcolor
 
 
 " indentation stuffs
