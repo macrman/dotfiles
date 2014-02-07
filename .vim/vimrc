@@ -1,14 +1,9 @@
 
 
-""""" vundle stuff 
+""""" pathogen stuff 
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
-
-""""" my bundles from github
-Bundle 'Shougo/unite.vim'
 
 
 filetype plugin indent on     " Required!
@@ -21,7 +16,8 @@ set ruler
 set cursorline
 set cursorcolumn
 let &colorcolumn=join(range(80,99),",")
-"colorscheme flatcolor
+colorscheme lucius
+LuciusBlackHighContrast
 
 
 " indentation stuffs
@@ -31,3 +27,6 @@ set expandtab
 set autoindent
 set smarttab
 
+" unite.vim stuff
+nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
+nnoremap <leader>b :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
